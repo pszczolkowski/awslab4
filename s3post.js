@@ -78,6 +78,10 @@ S3Form.prototype.addS3CredientalsFields = function(fields, awsConfig){
 	return fields;
 }
 
+S3Form.prototype.addMetaDataField = function (fields, name, value) {
+	fields.push(hiddenField('x-amz-' + name, value));
+};
+
 
 var hiddenField = function(fieldName, value) {
 	return {name: fieldName, value : value};
