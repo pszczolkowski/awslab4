@@ -2,7 +2,7 @@
 	"conditions": [ ["starts-with", "$key", "upload/"],
     				 {"bucket": "pszczolkowski-lab4"}, 
     				 {"acl": "private"},
-    				 {"success_action_redirect": "http://localhost:8080/s3digest"},
+    				 {"success_action_redirect": "http://localhost:8080/uploadSucceeded"},
     				 ["content-length-range", 0, 1048576]
     				]   
 }
